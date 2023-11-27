@@ -1,0 +1,18 @@
+body {
+    background-color: red;
+}
+// assets/styles/global.scss
+
+// customize some Bootstrap variables
+$primary: darken(#428bca, 20%);
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+
+.container-fluid {
+    background: fuchsia;
+}
+
+.nav-link {
+    background: chartreuse;
+}
