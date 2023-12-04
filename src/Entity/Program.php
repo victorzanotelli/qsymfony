@@ -34,6 +34,7 @@ class Program
     #[ORM\Column]
     private ?int $year = null;
 
+
     #[ORM\OneToMany(mappedBy: 'program', targetEntity: Season::class)]
     private Collection $seasons;
 
@@ -147,4 +148,5 @@ class Program
 
         return $this;
     }
+
 }
