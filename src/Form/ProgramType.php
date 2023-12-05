@@ -3,14 +3,15 @@
 namespace App\Form;
 
 use App\Entity\Program;
-use Doctrine\DBAL\Types\IntegerType;
-use phpDocumentor\Reflection\Types\Integer;
+use App\Repository\ProgramRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Entity;
+
+#[ORM\Entity(repositoryClass: ProgramRepository::class)]
 class ProgramType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
